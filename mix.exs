@@ -15,7 +15,7 @@ defmodule PhoenixUserAuth.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {PhoenixUserAuth, []},
-     applications: [:phoenix, :cowboy, :logger]]
+     applications: [:phoenix, :cowboy, :postgrex, :ecto, :logger]]
   end
 
   # Specifies your project dependencies
@@ -23,6 +23,8 @@ defmodule PhoenixUserAuth.Mixfile do
   # Type `mix help deps` for examples and options
   defp deps do
     [{:phoenix, github: "phoenixframework/phoenix"},
-     {:cowboy, "~> 1.0"}]
+      {:postgrex, "~> 0.5"},
+      {:ecto, "~> 0.2.0"},
+      {:cowboy, "~> 1.0"}]
   end
 end
