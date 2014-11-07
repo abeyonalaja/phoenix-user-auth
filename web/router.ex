@@ -14,6 +14,8 @@ defmodule PhoenixUserAuth.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PhoenixUserAuth.PageController, :index
+    get "/users/new", PhoenixUserAuth.UserController, :new, as: :user
+
   end
 
   # Other scopes may use custom stacks.
