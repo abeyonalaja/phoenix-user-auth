@@ -9,6 +9,7 @@ defmodule PhoenixUserAuth do
     children = [
       # Define workers and child supervisors to be supervised
       # worker(PhoenixUserAuth.Worker, [arg1, arg2, arg3])
+      worker(PhoenixUserAuth.Repo, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
